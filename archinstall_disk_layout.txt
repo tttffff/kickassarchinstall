@@ -26,7 +26,7 @@
 			"@/mysql": "/var/lib/mysql",
 			"@/postgres": "/var/lib/pgsql",
                         "@/.snapshots": "/.snapshots",
-                        "@/.snapshots/0/snapshot": "/"
+                        "@/.snapshots/1/snapshot": "/"
                     }
                 },
                 "encrypted": false,
