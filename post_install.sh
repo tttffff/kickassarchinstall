@@ -13,11 +13,10 @@ cp /.snapshots/1/info.xml /.snapshots/0/info.xml &&
 sed -i 's/<num>1/<num>0/' /.snapshots/0/info.xml &&
 sed -i 's/<description>After Snapper Installed/<description>First Root/' /.snapshots/0/info.xml &&
 pacman -S grub-btrfs snap-pac &&
-snapper --ambit classic rollback 0 &&
+btrfs subvolume set-default / &&
 systemctl enable --now grub-btrfs.path &&
 
 grub-mkconfig -o /boot/grub/grub.cfg &&
-pacman -S ttf-bitstream-vera ttf-croscore ttf-dejavu gnu-free-fonts ttf-ibm-plex ttf-liberation ttf-linux-libertine noto-fonts ttf-roboto tex-gyre-fonts ttf-ubuntu-font-family locate tmux btop vim  && \
 sed -i 's/PRUNENAMES = "/PRUNENAMES = ".snapshots /' /etc/updatedb.conf &&
 # snapper -c root create --description "Before LARBS" &&
 systemctl enable --now snapper-timeline.timer &&
