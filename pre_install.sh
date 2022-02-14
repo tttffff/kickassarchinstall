@@ -1,6 +1,4 @@
 #!/bin/bash
-pacman -Sy
-pacman -S git
 git clone https://github.com/archlinux/archinstall
 cp *txt archinstall
 cd archinstall
