@@ -48,7 +48,7 @@
         "ttf-roboto",
         "tex-gyre-fonts",
         "ttf-ubuntu-font-family",
-        "locate",
+        "mlocate",
         "tmux",
         "btop",
         "vim"
