@@ -37,20 +37,20 @@
     },
     "ntp": true,
     "packages": [
-        "ttf-bitstream-vera"
-        "ttf-croscore"
-        "ttf-dejavu"
-        "gnu-free-fonts"
-        "ttf-ibm-plex"
-        "ttf-liberation"
-        "ttf-linux-libertine"
-        "noto-fonts"
-        "ttf-roboto"
-        "tex-gyre-fonts"
-        "ttf-ubuntu-font-family"
-        "locate"
-        "tmux"
-        "btop"
+        "ttf-bitstream-vera",
+        "ttf-croscore",
+        "ttf-dejavu",
+        "gnu-free-fonts",
+        "ttf-ibm-plex",
+        "ttf-liberation",
+        "ttf-linux-libertine",
+        "noto-fonts",
+        "ttf-roboto",
+        "tex-gyre-fonts",
+        "ttf-ubuntu-font-family",
+        "locate",
+        "tmux",
+        "btop",
         "vim"
     ],
     "plugin": null,
