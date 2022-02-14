@@ -1,7 +1,8 @@
 {
     "archinstall-language": "English",
-    "audio": "none",
+    "audio": "pipewire",
     "bootloader": "grub-install",
+    "gfx_driver": "Intel (open-source)",
     "config_version": "2.4.0-dev0",
     "debug": false,
     "harddrives": [
@@ -35,14 +36,32 @@
         "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
     },
     "ntp": true,
-    "packages": [],
+    "packages": [
+        "ttf-bitstream-vera"
+        "ttf-croscore"
+        "ttf-dejavu"
+        "gnu-free-fonts"
+        "ttf-ibm-plex"
+        "ttf-liberation"
+        "ttf-linux-libertine"
+        "noto-fonts"
+        "ttf-roboto"
+        "tex-gyre-fonts"
+        "ttf-ubuntu-font-family"
+        "locate"
+        "tmux"
+        "btop"
+        "vim"
+    ],
     "plugin": null,
-    "profile": null,
+    "profile": {
+        "path": "/root/kickassarchinstall/archinstall/archinstall/profiles/xorg.py",
+    },
     "script": "guided",
     "silent": false,
     "swap": true,
     "sys-encoding": "utf-8",
-    "sys-language": "en_US",
+    "sys-language": "en_GB",
     "timezone": "Europe/London",
     "version": "2.4.0-dev0"
 }
