@@ -1,0 +1,45 @@
+{
+    "/dev/sda": {
+        "partitions": [
+            {
+                "boot": true,
+                "encrypted": false,
+                "filesystem": {
+                    "format": "fat32"
+                },
+                "mountpoint": "/boot",
+                "size": "2048MiB",
+                "start": "3MiB",
+                "type": "primary",
+                "wipe": true
+            },
+            {
+                "btrfs": {
+                    "subvolumes": {
+                        "@": null,
+                        "@/home": "/home",
+			"@/root": "/root",
+                        "@/log": "/var/log",
+                        "@/pkg": "/var/cache/pacman/pkg",
+			"@/vmimages": "/var/lib/libvrt/images",
+			"@/mariadb": "/var/lib/mariadb",
+			"@/mysql": "/var/lib/mysql",
+			"@/postgres": "/var/lib/pgsql",
+                        "@/.snapshots": "/.snapshots",
+                        "@/.snapshots/0/snapshot": "/"
+                    }
+                },
+                "encrypted": false,
+                "filesystem": {
+                    "format": "btrfs"
+                },
+                "mountpoint": null,
+                "size": "100%",
+                "start": "2051MiB",
+                "type": "primary",
+                "wipe": true
+            }
+        ],
+        "wipe": true
+    }
+}
