@@ -8,10 +8,11 @@ snapper -c home create-config /home &&
 cp /etc/snapper/configs/home /etc/snapper/configs/root &&
 sed -i 's:SUBVOLUME="/home":SUBVOLUME="/":' /etc/snapper/configs/root &&
 sed -i 's/SNAPPER_CONFIGS="/SNAPPER_CONFIGS="root /' /etc/conf.d/snapper &&
+systemctl restart snapperd &&
 snapper -c root create --description "After Snapper Installed" &&
-cp /.snapshots/1/info.xml /.snapshots/0/info.xml &&
-sed -i 's/<num>1/<num>0/' /.snapshots/0/info.xml &&
-sed -i 's/<description>After Snapper Installed/<description>First Root/' /.snapshots/0/info.xml &&
+cp /.snapshots/2/info.xml /.snapshots/1/info.xml &&
+sed -i 's/<num>2/<num>1/' /.snapshots/1/info.xml &&
+sed -i 's/<description>After Snapper Installed/<description>First Root/' /.snapshots/1/info.xml &&
 pacman -S grub-btrfs snap-pac &&
 btrfs subvolume set-default / &&
 systemctl enable --now grub-btrfs.path &&
