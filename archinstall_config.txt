@@ -1,14 +1,13 @@
 {
+    "additional-repositories": [],
     "archinstall-language": "English",
     "audio": "pipewire",
     "bootloader": "grub-install",
-    "gfx_driver": "Intel (open-source)",
     "config_version": "2.4.0-dev0",
     "debug": false,
     "harddrives": [
         "/dev/sda"
     ],
-    "hostname": "test-host",
     "kernels": [
         "linux"
     ],
@@ -33,7 +32,7 @@
     "mount_point": null,
     "nic": {
         "NetworkManager": true,
-        "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
+        "type": "network_manager"
     },
     "ntp": true,
     "packages": [
@@ -54,9 +53,6 @@
         "vim"
     ],
     "plugin": null,
-    "profile": {
-        "path": "/root/kickassarchinstall/archinstall/archinstall/profiles/xorg.py",
-    },
     "script": "guided",
     "silent": false,
     "swap": true,
