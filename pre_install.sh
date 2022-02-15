@@ -3,6 +3,7 @@ git clone https://github.com/archlinux/archinstall &&
 cp *txt archinstall &&
 cd archinstall &&
 python setup.py install &&
+sleep 2 &&
 python -m archinstall --config archinstall_config.txt --disk_layouts archinstall_disk_layout.txt &&
 mount -o subvol=@/.snapshots/1/snapshot /dev/sda2 /mnt &&
 # I don't know why archinstall adds this into fstab, it doesn't seem to do anthing, and we deffo don't want it later
