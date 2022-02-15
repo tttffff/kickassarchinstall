@@ -5,9 +5,11 @@
     "bootloader": "grub-install",
     "config_version": "2.4.0-dev0",
     "debug": false,
+    "gfx_driver": "Intel (open-source)",
     "harddrives": [
         "/dev/sda"
     ],
+    "hostname": "archlinux",
     "kernels": [
         "linux"
     ],
@@ -53,6 +55,9 @@
         "vim"
     ],
     "plugin": null,
+    "profile": {
+        "path": "/root/kickassarchinstall/archinstall/archinstall/profiles/xorg.py"
+    },
     "script": "guided",
     "silent": false,
     "swap": true,
