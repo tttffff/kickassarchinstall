@@ -28,8 +28,7 @@ cp *txt archinstall &&
 cd archinstall &&
 python setup.py install &&
 # Sometimes it fails first time, can't work it out tbh.
-python -m archinstall --config archinstall_config.txt --disk_layouts archinstall_disk_layout.txt ||
-(pwd && python -m archinstall --config archinstall_config.txt --disk_layouts archinstall_disk_layout.txt) &&
+python -m archinstall --config archinstall_config.txt --disk_layouts archinstall_disk_layout.txt &&
 cd .. &&
 
 # Change /etc/fstab before booting into new system
