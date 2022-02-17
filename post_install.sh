@@ -13,7 +13,7 @@ sed -E -i 's:#(NoUpgrade.*):\1 etc/cron.daily/snapper etc/cron.hourly/snapper:' 
 sed -E -i 's:#(NoExtract.*):\1 etc/cron.daily/snapper etc/cron.hourly/snapper:' /etc/pacman.conf &&
 
 # Create snapper configs, a bit of a jig, but it works. Also change TIMELINE options to something reasonable.
-pacman -S snapper &&
+pacman --noconfirm -S snapper &&
 snapper -c home create-config /home &&
 sed -i 's/LY="10/LY="3/' /etc/snapper/configs/home &&
 cp /etc/snapper/configs/home /etc/snapper/configs/root &&
@@ -24,7 +24,7 @@ snapper -c root create --description "After Snapper Installed" &&
 cp /.snapshots/2/info.xml /.snapshots/1/info.xml &&
 sed -i 's/<num>2/<num>1/' /.snapshots/1/info.xml &&
 sed -i 's/<description>After Snapper Installed/<description>First Root/' /.snapshots/1/info.xml &&
-pacman -S grub-btrfs snap-pac &&
+pacman --noconfirm -S grub-btrfs snap-pac &&
 btrfs subvolume set-default / &&
 systemctl enable --now grub-btrfs.path &&
 # Re-create grub config
