@@ -1,5 +1,5 @@
 {
-    "HARDDRIVE_GOES_HERRE": {
+    "HARDDRIVE_GOES_HERE": {
         "partitions": [
             {
                 "boot": true,
