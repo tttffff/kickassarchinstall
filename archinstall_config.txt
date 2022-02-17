@@ -52,7 +52,12 @@
         "tmux",
         "btop",
         "vim",
-        "mandb"
+        "mandb",
+        "bluez",
+        "bluez-utils",
+        "rsync",
+        "xdg-utils",
+        "xdg-user-dirs"
     ],
     "plugin": null,
     "script": "guided",
