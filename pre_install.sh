@@ -34,6 +34,7 @@ git clone https://github.com/archlinux/archinstall &&
 cd archinstall &&
 python setup.py install &&
 # Sometimes it fails first time, can't work it out tbh.
+python -m archinstall --config NOTAREALFILE &> /dev/null
 python -m archinstall --config ../archinstall_config.txt --disk_layouts ../archinstall_disk_layout.txt &&
 cd .. &&
 
