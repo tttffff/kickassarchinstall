@@ -19,8 +19,8 @@ git clone https://github.com/archlinux/archinstall &&
 cp *txt archinstall &&
 cd archinstall &&
 python setup.py install &&
-echo "Waiting 5 seconds..." &&
-sleep 5 &&
+# Sometimes it fails first time, can't work it out tbh.
+python -m archinstall --config archinstall_config.txt --disk_layouts archinstall_disk_layout.txt ||
 python -m archinstall --config archinstall_config.txt --disk_layouts archinstall_disk_layout.txt &&
 cd .. &&
 
