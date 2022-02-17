@@ -49,6 +49,6 @@ mkdir /mnt/archinstall/etc/pacman.d/hooks
 cp 50-bootbackup.hook /mnt/archinstall/etc/pacman.d/hooks/50-bootbackup.hook &&
 
 # Copy post install script to root user
-cp post_install.sh /mnt/archinstall/mnt &&
+cp post_install.sh /mnt/archinstall/root &&
 
 echo "SMASHED IT. Please reboot and run the post_install script (it is in /root)"
