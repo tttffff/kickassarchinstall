@@ -39,7 +39,6 @@ python -m archinstall --config archinstall_config.txt --disk_layouts archinstall
 cd .. &&
 
 # Change /etc/fstab before booting into new system
-mount -o subvol=@/.snapshots/1/snapshot /dev/sda2 /mnt &&
 # I don't know why genfstab adds this into fstab, it doesn't seem to do anthing, and we deffo don't want it later
 sed -i 's:,subvolid=[0-9]\+,subvol=/@/.snapshots/1/snapshot::' /mnt/archinstall/etc/fstab &&
 # Better options for our BTFS volumes
