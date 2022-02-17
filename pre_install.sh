@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clear
-echo "Welcome to the kickassarchinstall. Setting everything up with BTRFS in a more OpenSUSE style (snapper rollbacks work)"
+echo "Welcome to the kickassarchinstall. Setting up with BTRFS in a more OpenSUSE style (snapper rollbacks work)"
 lsblk | grep disk
 read -p "Enter the drive that you would like to install on (e.g. sda): " drive
 drive=/dev/$drive
@@ -11,7 +11,7 @@ sed -i "s:HARDDRIVE_GOES_HERE:${drive}:" archinstall_disk_layout.txt
 sed -i "s:HARDDRIVE_GOES_HERE:${drive}:" archinstall_config.txt
 
 echo "About to run ArchInstall with our config. You will be able to pick things like your user accounts, profile etc"
-echo "I suggest picking profile xorg so we can get the drives set up ready for LARBS without installing any bloat"
+echo "I suggest picking profile xorg so we can get the drivers set up ready for LARBS without installing any bloat"
 read -p "Press enter to continue..."
 
 # Get the latest ArchInstall (it will work with this set up), copy config files, install and run
