@@ -5,7 +5,7 @@ sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/GRUB_CMDLINE_LINUX_DEFAULT="video=1920x10
 sed -i 's/rootflags=subvol=${rootsubvol}//' /etc/grub.d/10_linux &&
 
 # Turn fsck off (we don't want this for btrfs)
-sed 's/ fsck//' /etc/mkinitcpio.conf &&
+sed -i 's/ fsck//' /etc/mkinitcpio.conf &&
 mkinitcpio -P &&
 
 # Tell Pacman not to install cron files for snapper (we will use systemd)
