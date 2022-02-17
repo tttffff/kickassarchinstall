@@ -5,9 +5,10 @@ clear &&
 printf "
 Welcome to the kickassarchinstall.
 
-We will set ArchLinux with BTRFS in a more OpenSUSE style layout so that snapper rollbacks work.
+This script ArchLinux with BTRFS in a more OpenSUSE style layout so that snapper rollbacks work.
 Other packages will be installed and configurations made. Look in and modify these scripts if needs be.
 
+-------------------------------------------------------------------------------------------------------
 " &&
 
 lsblk | grep disk &&
