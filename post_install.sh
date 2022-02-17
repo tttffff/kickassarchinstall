@@ -9,7 +9,7 @@ sed -i 's/rootflags=subvol=${rootsubvol}//' /etc/grub.d/10_linux &&
 # Create snapper configs, a bit of a jig, but it works. Also change TIMELINE options to something reasonable.
 pacman -S snapper &&
 snapper -c home create-config /home &&
-# Change the config for TIMELINE
+sed -i 's/LY="10/LY="3/' /etc/snapper/config/home
 cp /etc/snapper/configs/home /etc/snapper/configs/root &&
 sed -i 's:SUBVOLUME="/home":SUBVOLUME="/":' /etc/snapper/configs/root &&
 sed -i 's/SNAPPER_CONFIGS="/SNAPPER_CONFIGS="root /' /etc/conf.d/snapper &&
