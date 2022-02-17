@@ -1,7 +1,15 @@
 #!/bin/bash
 
 clear &&
-echo "Welcome to the kickassarchinstall. Setting up with BTRFS in a more OpenSUSE style (snapper rollbacks work)" &&
+
+printf "
+Welcome to the kickassarchinstall.
+
+We will set ArchLinux with BTRFS in a more OpenSUSE style layout so that snapper rollbacks work.
+Other packages will be installed and configurations made. Look in and modify these scripts if needs be.
+
+" &&
+
 lsblk | grep disk &&
 read -p "Enter the drive that you would like to install on (e.g. sda): " drive &&
 drive=/dev/$drive &&
