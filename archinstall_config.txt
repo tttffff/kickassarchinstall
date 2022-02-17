@@ -51,7 +51,8 @@
         "mlocate",
         "tmux",
         "btop",
-        "vim"
+        "vim",
+        "mandb"
     ],
     "plugin": null,
     "script": "guided",
