@@ -9,13 +9,13 @@ sed -i 's/ fsck//' /etc/mkinitcpio.conf &&
 mkinitcpio -P &&
 
 # Tell Pacman not to install cron files for snapper (we will use systemd)
-sed -E -i 's:#(NoUpgrade.*):\1 etc/cron.daily/snapper etc/cron.hourly/snapper:' /etc/pacman.conf
-sed -E -i 's:#(NoExtract.*):\1 etc/cron.daily/snapper etc/cron.hourly/snapper:' /etc/pacman.conf
+sed -E -i 's:#(NoUpgrade.*):\1 etc/cron.daily/snapper etc/cron.hourly/snapper:' /etc/pacman.conf &&
+sed -E -i 's:#(NoExtract.*):\1 etc/cron.daily/snapper etc/cron.hourly/snapper:' /etc/pacman.conf &&
 
 # Create snapper configs, a bit of a jig, but it works. Also change TIMELINE options to something reasonable.
 pacman -S snapper &&
 snapper -c home create-config /home &&
-sed -i 's/LY="10/LY="3/' /etc/snapper/config/home
+sed -i 's/LY="10/LY="3/' /etc/snapper/configs/home &&
 cp /etc/snapper/configs/home /etc/snapper/configs/root &&
 sed -i 's:SUBVOLUME="/home":SUBVOLUME="/":' /etc/snapper/configs/root &&
 sed -i 's/SNAPPER_CONFIGS="/SNAPPER_CONFIGS="root /' /etc/conf.d/snapper &&
@@ -32,9 +32,10 @@ grub-mkconfig -o /boot/grub/grub.cfg &&
 
 # Don't want updatedb to include files from our snapshots
 sed -i 's/PRUNENAMES = "/PRUNENAMES = ".snapshots /' /etc/updatedb.conf &&
+sed -i 's:PRUNEPATHS = ":PRUNEPATHS = "/.snapshots :' /etc/updatedb.conf &&
 systemctl enable --now snapper-timeline.timer &&
 systemctl enable --now snapper-cleanup.timer &&
-# snapper -c root create --description "Before LARBS" &&
-# curl -LO larbs.xyz/larbs.sh &&
-# sh larbs.sh &&
+snapper -c root create --description "Before LARBS" &&
+curl -LO larbs.xyz/larbs.sh &&
+sh larbs.sh &&
 snapper -c root create --description "After Kickassarchinstall"
