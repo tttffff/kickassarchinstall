@@ -52,7 +52,7 @@
         "tmux",
         "btop",
         "vim",
-        "mandb",
+        "man",
         "bluez",
         "bluez-utils",
         "rsync",
