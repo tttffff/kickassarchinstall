@@ -20,7 +20,8 @@ sed -i "s:HARDDRIVE_GOES_HERE:${drive}:" archinstall_disk_layout.txt &&
 sed -i "s:HARDDRIVE_GOES_HERE:${drive}:" archinstall_config.txt &&
 
 printf "
-About to run ArchInstall with our config. You will be able to pick things like your user accounts, profile etc
+-------------------------------------------------------------------------------------------------------
+We are about to run ArchInstall with our config. You will be able to pick things like your user accounts, profile etc
 I suggest picking profile xorg so we can get the drivers set up ready for LARBS without installing any bloat
 
 Unless you are SURE, select NO to: Would you like to chroot into the newly created installation and perform post-installation configuration?
@@ -34,7 +35,7 @@ read -p "Press enter to continue..." &&
 git clone https://github.com/archlinux/archinstall &&
 cd archinstall &&
 python setup.py install &&
-# Sometimes it fails first time, can't work it out tbh.
+# Sometimes it fails first time, can't work it out tbh. Purposefully failing it first time solves that.
 python -m archinstall --config NOTAREALFILE &> /dev/null
 python -m archinstall --config ../archinstall_config.txt --disk_layouts ../archinstall_disk_layout.txt &&
 cd .. &&
