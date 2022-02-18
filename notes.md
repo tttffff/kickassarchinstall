@@ -1,0 +1,11 @@
+https://www.youtube.com/watch?v=sm_fuBeaOqE
+https://doc.opensuse.org/documentation/leap/archive/15.0/reference/html/book.opensuse.reference/cha.snapper.html
+https://en.opensuse.org/SDB:BTRFS
+https://github.com/archlinux/archinstall/issues/781
+https://www.jwillikers.com/btrfs-layout
+https://www.jwillikers.com/btrfs-mount-options
+https://www.jwillikers.com/why-choose-btrfs
+https://wiki.archlinux.org/title/snapper
+https://wiki.archlinux.org/title/snapper
+https://bbs.archlinux.org/viewtopic.php?id=261738
+https://bbs.archlinux.org/viewtopic.php?id=196709
