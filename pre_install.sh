@@ -15,7 +15,7 @@ lsblk | grep disk &&
 read -p "Enter the drive that you would like to install on (e.g. sda): " drive &&
 drive=/dev/$drive &&
 echo "This script will completly wipe ${drive}" &&
-read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] ]] || exit 1
 sed -i "s:HARDDRIVE_GOES_HERE:${drive}:" archinstall_disk_layout.txt &&
 sed -i "s:HARDDRIVE_GOES_HERE:${drive}:" archinstall_config.txt &&
 
