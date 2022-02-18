@@ -9,7 +9,7 @@ Boot an Arch Install ISO and get an internet connection. It should be auto-setup
 
 Run these commands
 ```
-pacman --noconfirm -Sy git
+pacman -Sy git
 git clone https://github.com/tttffff/kickassarchinstall
 cd kickassarchinstall
 bash pre_install.sh
