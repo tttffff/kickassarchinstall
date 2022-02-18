@@ -40,8 +40,12 @@ echo "Would you like to install LARBS? (https://larbs.xyz)" &&
 echo "Personally, I think it's great, but you may not want to do this if you are using a DM like Gnome or KDE" &&
 read -p "(Y/N): " confirm && [[ $confirm == [yY] ]] && install_larbs()
 
+echo "Would you like to create a new snapshot after every pacman command?" &&
+echo "This is great if you want to rollback after a botched install/upgrade, but can result in LOADS of snapshots if you regually install/upgrade things" &&
+read -p "(Y/N): " confirm && [[ $confirm == [yY] ]] && pacman --noconfirm -S snap-pac
+
 # So that we get a snapshots added to grub and a snapshot after every pacman command
-pacman --noconfirm -S grub-btrfs snap-pac &&
+pacman --noconfirm -S grub-btrfs &&
 systemctl enable --now grub-btrfs.path &&
 # Re-create grub config
 btrfs subvolume set-default / &&
