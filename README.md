@@ -4,6 +4,8 @@ Scripts and configs for an Arch Linux install
 These scripts and configs set up Arch Linux with the BTRFS filesystem. It uses an OpenSUSE style layout so that you can use the snapper rollback featute better.
 You can boot into a read-only snapshots using the grub menu then run `snapper rollback $num` and reboot. You will then boot into a R/W copy of that snapshot.
 
+It leverages the [ArchInstall](https://github.com/archlinux/archinstall/) script to make out lives easyer by passing config files into it. This also allows for interactive install desisions to be made by the user. Other desisions are made for you, but see the Configuration section below for infomation about changing these.
+
 # Installation
 Boot an Arch Install ISO and get an internet connection. It should be auto-setup if using Ethernet. For WiFi, check out `man iwctl`
 
@@ -21,3 +23,5 @@ Now that you are in your new system run `sudo -i` (or `su -` if you didn't give 
 
 Sorted =D
   
+# Configuration
+
