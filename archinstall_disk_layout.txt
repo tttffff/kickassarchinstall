@@ -29,7 +29,7 @@
                         "@/.snapshots/1/snapshot": "/"
                     }
                 },
-		"encrypted": false,
+		"encrypted": true,
                 "filesystem": {
                     "format": "btrfs"
                 },
