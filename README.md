@@ -17,7 +17,7 @@ bash pre_install.sh
 
 Follow the instructions and pick your account settings etc. Reboot into your new arch install.
 
-Now you are in your new system run `sudo -i` (or `su -` if you didn't give your account sudo rights). Change to the root home folder `cd /root` and run `bash post_install.sh`
+Now that you are in your new system run `sudo -i` (or `su -` if you didn't give your account sudo rights). Change to the root home folder `cd /root` and run `bash post_install.sh`
 
 Sorted =D
   
