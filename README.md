@@ -2,7 +2,7 @@
 Scripts and configs for an Arch Linux install
 
 These scripts and configs set up Arch Linux with the BTRFS filesystem. It uses an OpenSUSE style layout so that you can use the snapper rollback featute better.
-You can boot into a read-only snapshots using the grub menu then run `snapper rollback $num` and reboot. You will then boot into a R/W copy of that snapshot.
+You will be a able to boot into read-only snapshots using the grub menu then run `snapper rollback $num` to create a R/W copy of that snapshot. Rebooting will then put you into that created snapshot.
 
 It leverages the [ArchInstall](https://github.com/archlinux/archinstall/) script to make our lives easyer by passing config files into it. This also allows for interactive install desisions to be made by the user. Other desisions are made for you, but see the Configuration section below for infomation about changing these.
 
