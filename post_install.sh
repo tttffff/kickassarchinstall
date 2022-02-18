@@ -38,7 +38,7 @@ sed -i 's/<description>After Snapper Installed/<description>First Root/' /.snaps
 
 echo "Would you like to install LARBS? (https://larbs.xyz)" &&
 echo "Personally, I think it's great, but you may not want to do this if you are using a DM like Gnome or KDE" &&
-read -p "(Y/N): " confirm && [[ $confirm == [yY] ]] && install_larbs()
+read -p "(Y/N): " confirm && [[ $confirm == [yY] ]] && install_larbs
 
 echo "Would you like to create a new snapshot after every pacman command?" &&
 echo "This is great if you want to rollback after a botched install/upgrade, but can result in LOADS of snapshots if you regually install/upgrade things" &&
