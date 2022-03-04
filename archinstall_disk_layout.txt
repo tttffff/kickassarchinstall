@@ -54,7 +54,7 @@
                         "@/.snapshots": {
 				"mountpount":"/.snapshots",
 				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
-			}
+			},
                         "@/.snapshots/1/snapshot": {
 				"mountpount":"/",
 				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
