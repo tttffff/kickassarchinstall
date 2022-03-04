@@ -43,9 +43,6 @@ cd .. &&
 # Change /etc/fstab before booting into new system
 # I don't know why genfstab adds this into fstab, it doesn't seem to do anthing, and we deffo don't want it later
 sed -i 's:,subvolid=[0-9]\+,subvol=/@/.snapshots/1/snapshot::' /mnt/archinstall/etc/fstab &&
-# Better options for our BTFS volumes
-sed -i 's/rw,relatime,space_cache=v2/defaults,noatime,autodefrag,ssd,discard=async,compress=zstd,space_cache=v2/' /mnt/archinstall/etc/fstab &&
-sed -E -i 's/((images|mariadb|mysql|pgsql)\s+btrfs\s+defaults,)/\1nodatacow,/' /mnt/archinstall/etc/fstab &&
 # Copy packman hook to backup /boot when there's any majot changes
 mkdir /mnt/archinstall/etc/pacman.d/hooks &&
 cp 50-bootbackup.hook /mnt/archinstall/etc/pacman.d/hooks/50-bootbackup.hook &&
