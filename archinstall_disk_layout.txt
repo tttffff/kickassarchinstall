@@ -14,19 +14,51 @@
                 "wipe": true
             },
             {
+	    nodatacow,defaults,noatime,autodefrag,ssd,discard=async,compress=zstd,space_cache=v2
+
                 "btrfs": {
                     "subvolumes": {
                         "@": null,
-                        "@/home": "/home",
-			"@/root": "/root",
-                        "@/log": "/var/log",
-                        "@/pkg": "/var/cache/pacman/pkg",
-			"@/vmimages": "/var/lib/libvrt/images",
-			"@/mariadb": "/var/lib/mariadb",
-			"@/mysql": "/var/lib/mysql",
-			"@/postgres": "/var/lib/pgsql",
-                        "@/.snapshots": "/.snapshots",
-                        "@/.snapshots/1/snapshot": "/"
+                        "@/home": {
+				"mountpount":"/home",
+				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+			"@/root": {
+				"mountpount":"/root",
+				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+                        "@/log": {
+				"mountpount":"/var/log",
+				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+                        "@/pkg": {
+				"mountpount":"/var/cache/pacman/pkg",
+				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+			"@/vmimages": {
+				"mountpount":"/var/lib/libvrt/images",
+				"options":["nodatacow", "defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+			"@/mariadb": {
+				"mountpount":"/var/lib/mariadb",
+				"options":["nodatacow","defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+			"@/mysql": {
+				"mountpount":"/var/lib/mysql",
+				"options":["nodatacow","defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+			"@/postgres": {
+				"mountpount":"/var/lib/pgsql",
+				"options":["nodatacow","defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			},
+                        "@/.snapshots": {
+				"mountpount":"/.snapshots",
+				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			}
+                        "@/.snapshots/1/snapshot": {
+				"mountpount":"/",
+				"options":["defaults","noatime","autodefrag","ssd","discard=async","compress=zstd","space_cache=v2"]
+			}
                     }
                 },
 		"encrypted": true,
